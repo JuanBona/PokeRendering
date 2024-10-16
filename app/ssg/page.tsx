@@ -1,6 +1,7 @@
 // app/ssg/page.tsx
 import React from 'react';
 
+// Esta función se ejecuta en el tiempo de construcción
 async function fetchPokemons() {
   const res = await fetch('https://pokeapi.co/api/v2/pokemon?limit=50');
   const data = await res.json();
@@ -14,6 +15,9 @@ async function fetchPokemons() {
 
   return pokemonDetails; // Regresamos el array con los detalles de los Pokémon
 }
+
+// Exportamos esta constante para forzar la generación estática
+export const dynamic = 'force-static'; // Esto asegura que se renderice estáticamente
 
 const SSG = async () => {
   const pokemons = await fetchPokemons();
@@ -40,4 +44,3 @@ const SSG = async () => {
 };
 
 export default SSG;
-  
