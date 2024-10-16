@@ -4,7 +4,7 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', marginTop: '50px' }}>
-      <h1>PokeAPI Rendering Examples</h1>
+      <h1 style={{color: 'black'}}>PokeAPI Rendering Examples</h1>
       <div style={{ display: 'flex', gap: '20px', marginTop: '20px' }}>
         <Link href="/csr">
           <button style={buttonStyle}>CSR</button>
